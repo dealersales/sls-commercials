@@ -81,3 +81,41 @@ iframe[class*="lazyload"] { background: #f0f3f5; }
     background: #f0f3f5;
 }
 #aside .map { height: 360px; min-height: 360px; padding-bottom: 0 !important; }
+
+/* Home-page FAQ band: the dealer's main colour with white type. The accordion
+   keeps a light panel so the answers stay readable, and its active state uses
+   the darker tone of the same colour. */
+#home-faqs.faq-on-brand{color:#fff}
+#home-faqs.faq-on-brand h2,#home-faqs.faq-on-brand p,#home-faqs.faq-on-brand .accordion-button{color:#fff}
+#home-faqs.faq-on-brand .opacity-75{opacity:1 !important;color:rgba(255,255,255,.85) !important}
+#home-faqs.faq-on-brand .accordion-item{background:rgba(0,0,0,.18);border:1px solid rgba(255,255,255,.18);border-radius:var(--bs-border-radius);margin-bottom:.5rem}
+#home-faqs.faq-on-brand .accordion-button{background:transparent;font-weight:600}
+#home-faqs.faq-on-brand .accordion-button:not(.collapsed){background:#fff;color:#c7081b !important}
+#home-faqs.faq-on-brand .accordion-button:focus{box-shadow:none}
+#home-faqs.faq-on-brand .accordion-body{color:rgba(255,255,255,.9)}
+#home-faqs.faq-on-brand .accordion-body a{color:#fff;text-decoration:underline}
+
+/* Registration field: number-plate treatment on the sell page (yellow fill, dark
+   bold type, wide tracking). Plate yellow is #FFD307 and carries near-black type,
+   never white - white on it is about 1.4:1. */
+.plate-input{background:#FFD307 !important;border:2px solid #111 !important;color:#111 !important;font-weight:800;
+  text-transform:uppercase;letter-spacing:.14em;padding:.65rem .9rem}
+.plate-input::placeholder{color:#6b5f00;font-weight:700;letter-spacing:.14em;opacity:1}
+.plate-input:focus{box-shadow:0 0 0 .25rem rgba(199,8,27,.25) !important;border-color:#111 !important}
+
+/* Sell-page comparison table: the dealer's own column is the one being read. */
+.comparison-table{--bs-table-bg:transparent;border-color:rgba(0,0,0,.08)}
+.comparison-table thead th{font-size:.95rem;border-bottom-width:2px}
+.comparison-table tbody th{font-weight:600;white-space:nowrap}
+.comparison-table td.us{background:rgba(199,8,27,.06);font-weight:600;border-left:2px solid #c7081b;border-right:2px solid #c7081b}
+.comparison-table thead th.text-secondary{border-left:2px solid #c7081b;border-right:2px solid #c7081b}
+
+/* A four-box spec list on a vehicle card: two even rows of two. */
+.vehicle .card-body ul.details.spec-count-4>li{flex:1 1 45%}
+
+/* Sell-page hero: the dealer's own van behind a dark gradient wash. */
+.sell-hero{background:#0f1013}
+.sell-hero-bg{position:absolute;inset:0;background-size:cover;background-position:22% center;opacity:.6}
+.sell-hero:before{content:"";position:absolute;inset:0;z-index:1;
+  background:linear-gradient(95deg,rgba(0,0,0,.97) 0%,rgba(0,0,0,.9) 40%,rgba(0,0,0,.45) 62%,rgba(0,0,0,.25) 100%)}
+.sell-hero>.container{z-index:2}
